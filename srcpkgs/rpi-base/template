@@ -3,9 +3,9 @@ pkgname=rpi-base
 version=2.6
 revision=1
 archs="armv6l* armv7l* aarch64*"
-depends="virtual?ntp-daemon rpi-firmware rpi-kernel"
+depends="virtual?ntp-daemon rpi-firmware"
 short_desc="Void Linux Raspberry Pi base files"
-maintainer="Orphaned <orphan@voidlinux.org>"
+maintainer="Piraty <piraty1@inbox.ru>"
 license="Public Domain"
 homepage="https://www.voidlinux.org"
 
