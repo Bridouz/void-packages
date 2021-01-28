@@ -1,0 +1,17 @@
+WARNING
+
+If you read this on one of rpi0,rpi1,rpi2,rpi3, manual action may be required!
+
+rpi-base dropped the dependency on rpi-kernel which very likely made rpi-kernel
+an orphan package on your system.
+Instead, flavor-dependant kernel packages were introduced.
+
+To mark rpi-kernel as 'manual' (so you don't accidentally remove it during
+orphan removal), please run:
+
+	# check if the kernel package is an orphan
+	xbps-query -O | grep 'rpi[123]-kernel'
+
+	# mark it as explicitly installed
+	xbps-pkgdb -m manual $(xbps-query -O | grep 'rpi[123]-kernel')
+
